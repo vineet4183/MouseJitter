@@ -10,7 +10,7 @@ so your machine does not go idle. Configuration is done through a simple `config
 ## Files Included
 - `MouseMove.jar`
 - `config.properties`
-- `readme.txt`
+- `readme`
 - Updated binaries are always available at https://link.chaudhary.me/mm
 
 ## Install / Setup
