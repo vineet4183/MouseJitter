@@ -8,6 +8,8 @@ This utility can be useful for:
 - MS Teams going idle
 - Other things triggered by idle detection
 
+This utility will NOT be detected or flagged by any anti-malware, anti-virus or monitoring software and is completly safe to use as long as you can run Java on your machine (steps below).
+
 ## Requirements
 - Java Runtime Environment (JRE) 8 or later (Java 8 supported)
 
