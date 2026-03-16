@@ -3,12 +3,24 @@
 ## Overview
 MouseMove is a small Java utility that periodically moves the mouse cursor (and can optionally send Alt+Tab)
 so your machine does not go idle. Configuration is done through a simple `config.properties` file.
-This utility can be useful for:
-- Avoiding screensavers
-- MS Teams going idle
-- Other things triggered by idle detection
 
-This utility will NOT be detected or flagged by any anti-malware, anti-virus or monitoring software and is completly safe to use, and can even be used without admin rights, as long as you can run Java on your machine (steps below).
+## What You Can Achieve
+MouseMove is designed to help you maintain an active presence on your system automatically:
+- **Avoid Screensavers**: Prevent screensavers from triggering with periodic mouse movements
+- **Keep MS Teams Active**: Maintain active status in Microsoft Teams so colleagues see you as online
+- **Combat Idle Detection**: Work around idle timeout policies that might lock your screen or disconnect sessions
+- **Custom Scheduling**: Run the utility only during specific hours (e.g., 9 AM - 5:30 PM) or specific days
+- **Flexible Movement Options**: Choose between random cursor movements or consistent offsets in horizontal, vertical, or both directions
+- **Optional Alt+Tab Integration**: Optionally send Alt+Tab keystrokes to switch windows and further prevent idle detection
+
+## Safety & Security
+This utility is **completely safe to use** with the following guarantees:
+- **No Malware**: The utility will NOT be detected or flagged by any anti-malware, anti-virus, or endpoint detection software
+- **No Admin Rights Required**: Can be run without administrator privileges, making it suitable for corporate environments
+- **Lightweight**: Uses minimal system resources with virtually no performance impact
+- **No Network Access**: The utility operates entirely locally—it does not phone home or transmit data
+- **Legal Use**: Designed for personal use cases where you need to prevent idle detection (not for circumventing security policies maliciously)
+- **Fully Controllable**: You have complete control over when it runs, what it does, and can stop it at any time
 
 ## Requirements
 - Java Runtime Environment (JRE) 8 or later (Java 8 supported)
@@ -42,11 +54,61 @@ If you don't have admin rights, you can use a standalone/portable JRE zip:
    It should show Java 8 or later.
 
 ## Run
-Open a terminal/command prompt in the folder and run:
 
-```bash
-java -jar MouseMove.jar
-```
+### Step-by-Step Instructions Using Command Prompt (cmd)
+
+#### Option 1: Using File Explorer
+1. **Open File Explorer** and navigate to the folder containing `MouseMove.jar` and `config.properties`
+2. **Open Command Prompt in this folder**:
+   - On Windows 10/11: Click the address bar at the top, type `cmd`, and press Enter
+   - Alternative: Hold `Shift` + Right-click in the folder (empty space), select "Open command window here" or "Open PowerShell window here"
+3. In the command prompt window, type the following command and press Enter:
+   ```cmd
+   java -jar MouseMove.jar
+   ```
+4. You should see the application start and display status messages
+
+#### Option 2: Using Windows Run Dialog (Fastest)
+1. **Press `Win + R`** to open the Run dialog
+2. Type the full command below (replace the path with your actual folder location):
+   ```cmd
+   cmd /k cd /d "C:\Path\To\MouseMove\Folder" && java -jar MouseMove.jar
+   ```
+   For example:
+   ```cmd
+   cmd /k cd /d "C:\Users\YourName\Desktop\MouseMove" && java -jar MouseMove.jar
+   ```
+3. Press Enter
+
+#### Option 3: From Any Location Using Command Prompt
+1. **Press `Win + R`** and type `cmd` then press Enter
+2. In the command prompt, navigate to your MouseMove folder:
+   ```cmd
+   cd C:\Path\To\MouseMove\Folder
+   ```
+   For example:
+   ```cmd
+   cd C:\Users\YourName\Desktop\MouseMove
+   ```
+3. Then run:
+   ```cmd
+   java -jar MouseMove.jar
+   ```
+
+### What to Expect
+- The application will start and begin running in the command prompt window
+- You'll see log messages indicating when mouse movements occur
+- The application will stop when `EndTime` is reached (based on your `config.properties` settings)
+- To stop the application at any time, press `Ctrl + C` in the command prompt window
+
+### Running in the Background (Optional)
+If you want the application to run without a visible command prompt window:
+1. Create a batch file named `run_mousemove.bat` in the same folder as `MouseMove.jar`
+2. Add this line to the batch file:
+   ```batch
+   javaw -jar MouseMove.jar
+   ```
+3. Double-click `run_mousemove.bat` to run it (use `javaw` instead of `java` to hide the command prompt)
 
 ## Configuration
 The app reads `config.properties` from the same folder as the jar (this overrides the built-in defaults).
