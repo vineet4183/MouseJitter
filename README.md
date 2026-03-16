@@ -1,8 +1,12 @@
 # MouseMove
 
 ## Overview
-MouseMove is a small Java utility that periodically nudges the mouse cursor (and can optionally send Alt+Tab)
+MouseMove is a small Java utility that periodically moves the mouse cursor (and can optionally send Alt+Tab)
 so your machine does not go idle. Configuration is done through a simple `config.properties` file.
+This utility can be useful for:
+- Avoiding screensavers
+- MS Teams going idle
+- Other things triggered by idle detection
 
 ## Requirements
 - Java Runtime Environment (JRE) 8 or later (Java 8 supported)
