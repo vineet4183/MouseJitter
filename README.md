@@ -101,15 +101,6 @@ If you don't have admin rights, you can use a standalone/portable JRE zip:
 - The application will stop when `EndTime` is reached (based on your `config.properties` settings)
 - To stop the application at any time, press `Ctrl + C` in the command prompt window
 
-### Running in the Background (Optional)
-If you want the application to run without a visible command prompt window:
-1. Create a batch file named `run_mousemove.bat` in the same folder as `MouseMove.jar`
-2. Add this line to the batch file:
-   ```batch
-   javaw -jar MouseMove.jar
-   ```
-3. Double-click `run_mousemove.bat` to run it (use `javaw` instead of `java` to hide the command prompt)
-
 ## Configuration
 The app reads `config.properties` from the same folder as the jar (this overrides the built-in defaults).
 
