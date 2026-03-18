@@ -4,6 +4,8 @@
 MouseMove is a small Java utility that periodically moves the mouse cursor (and can optionally send Alt+Tab)
 so your machine does not go idle. Configuration is done through a simple `config.properties` file.
 
+Official website: https://mm.chaudhary.me
+
 ## What You Can Achieve
 MouseMove is designed to help you maintain an active presence on your system automatically:
 - **Avoid Screensavers**: Prevent screensavers from triggering with periodic mouse movements
@@ -29,7 +31,6 @@ This utility is **completely safe to use** with the following guarantees:
 - `MouseMove.jar`
 - `config.properties`
 - `README.md`
-- Updated binaries are always available at https://link.chaudhary.me/mm
 
 ## Install / Setup
 1. Install Java 8 or later.
